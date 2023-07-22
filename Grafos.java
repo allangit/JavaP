@@ -11,11 +11,16 @@ package com.mycompany.principal;
 
 public class Grafos {
     
-    private int A[][];
+    private boolean A[][];
     
     public Grafos(int vertices){
         
-        A=new int[vertices][vertices];
+        A=new boolean [vertices][vertices];
         
+    }
+    
+    public void AgregarArista(int i, int j) {
+        A[i][j] = true;
+        A[j][i] = true;
     }
 }
