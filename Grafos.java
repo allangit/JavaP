@@ -23,4 +23,15 @@ public class Grafos {
         A[i][j] = true;
         A[j][i] = true;
     }
+    
+    public boolean ExisteArista(int i, int j){ 
+        
+        return A[i][j]; 
+    } 
+    
+    public void BorrarArista(int i, int j) { 
+        
+        A[i][j] = false;
+        A[j][i] = false; 
+    }
 }
