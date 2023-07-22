@@ -15,8 +15,7 @@ public class Grafos {
     
     public Grafos(int vertices){
         
-        A=new boolean [vertices][vertices];
-        
+        A=new boolean [vertices][vertices];   
     }
     
     public void AgregarArista(int i, int j) {
@@ -33,5 +32,19 @@ public class Grafos {
         
         A[i][j] = false;
         A[j][i] = false; 
+    }
+    
+    public int[] ObtenerVecinos(int i){
+        
+        int vecinos [] = new int [A.length];
+           
+        for (int j = 0; j < A.length; j++) {
+        
+            if (A[i][j] == true) { 
+        
+                vecinos[j] = j;
+            }            
+        } 
+        return vecinos;
     }
 }
