@@ -11,5 +11,11 @@ package com.mycompany.principal;
 
 public class Grafos {
     
+    private int A[][];
     
+    public Grafos(int vertices){
+        
+        A=new int[vertices][vertices];
+        
+    }
 }
